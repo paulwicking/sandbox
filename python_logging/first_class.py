@@ -15,23 +15,6 @@ class FirstClass(object):
         self.current_number = 0
         self.logger = logging.getLogger(__name__)
 
-        #  Create the Logger
-        self.logger = logging.getLogger(__name__)
-        self.logger.setLevel(logging.INFO)
-
-        #  Create handler for logging to file
-        logger_handler = logging.FileHandler('logs/python_logging.log')
-        logger_handler.setLevel(logging.INFO)
-
-        #  Create formatter for formatting log messages
-        logger_formatter = logging.Formatter(fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-        #  Add formatter to handler
-        logger_handler.setFormatter(logger_formatter)
-
-        #  Add Handler to Logger
-        self.logger.addHandler(logger_handler)
-        self.logger.info('logger() configuration complete.')
 
     def increment_number(self):
         """Increments current_number by 1.
@@ -51,4 +34,3 @@ class FirstClass(object):
         self.current_number = 0
         self.logger.warning('Clearing number.')
         self.logger.info('Still clearing number.')
-

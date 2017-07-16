@@ -1,12 +1,16 @@
 """Module runner.
 """
-from python_logging.first_class import FirstClass
+from python_logging import FirstClass, SecondClass
 
 
-number = FirstClass()
-number.increment_number()
-number.increment_number()
-print(f'Current number: { number.current_number }')
-number.clear_number()
-print(f'Current number: { number.current_number }')
+MY_NUMBER = FirstClass()
+MY_NUMBER.increment_number()
+MY_NUMBER.increment_number()
+print(f'Current number: { MY_NUMBER.current_number }')
+MY_NUMBER.clear_number()
+print(f'Current number: { MY_NUMBER.current_number }')
 
+SYSTEM = SecondClass()
+SYSTEM.enable_system()
+SYSTEM.disable_system()
+print(f'Current system configuration: { SYSTEM.enabled }')
