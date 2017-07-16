@@ -13,13 +13,14 @@ class FirstClass(object):
         """Initialize current_number to 0 for instantiated objects.
         """
         self.current_number = 0
+        self.logger = logging.getLogger(__name__)
 
         #  Create the Logger
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(logging.INFO)
 
         #  Create handler for logging to file
-        logger_handler = logging.FileHandler('python_logging.log')
+        logger_handler = logging.FileHandler('logs/python_logging.log')
         logger_handler.setLevel(logging.INFO)
 
         #  Create formatter for formatting log messages
@@ -50,11 +51,4 @@ class FirstClass(object):
         self.current_number = 0
         self.logger.warning('Clearing number.')
         self.logger.info('Still clearing number.')
-
-number = FirstClass()
-number.increment_number()
-number.increment_number()
-print(f"Current number: { number.current_number }.")
-number.clear_number()
-print(f"Current number: { number.current_number }.")
 
