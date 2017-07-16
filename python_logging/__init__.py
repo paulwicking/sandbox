@@ -1,3 +1,8 @@
+"""Logging example module. Provides basic logging capabilities for packages.
+
+From http://www.patricksoftwareblog.com/python-logging-tutorial/
+"""
+
 from os import path, remove
 import logging
 import logging.config
