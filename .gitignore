@@ -1,2 +1,4 @@
 python_logging.log
 __pycache__
+*.cache/*
+pytest-test/.cache/
