@@ -4,3 +4,5 @@ __pycache__
 pytest-test/.cache/
 .idea/
 .cache/
+*.egg-info
+pytest-code/
